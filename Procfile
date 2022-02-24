@@ -1,0 +1,1 @@
+web: sh -c "cd Torneio && python torneio/manage.py migrate && gunicorn app.wsgi:application"
