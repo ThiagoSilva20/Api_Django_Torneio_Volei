@@ -5,12 +5,12 @@ from rest_framework import serializers
 class TeamSerializer(serializers.ModelSerializer):
     class Meta:
         model = Teams
-        fields = ['id', 'name_team', 'coach']
+        fields = ['id', 'name_team', 'coaches']
 
 class AthleteSerializer(serializers.ModelSerializer):
     class Meta:
         model = Athletes
-        fields = ['id', 'full_name', 'email', 'birth_date', 'federado', 'team', 'cpf', 'rg']
+        fields = ['id', 'full_name', 'email', 'birth_date', 'federado', 'teams', 'cpf', 'rg']
 
 class CoachSerializer(serializers.ModelField):
     class Meta:
